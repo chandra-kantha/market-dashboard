@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Market Dashboard</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 16px;
+      margin: 16px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .value {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 6px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Market Dashboard</h1>
+
+  <div class="card">
+    <h2>Gold Price Today (Approx)</h2>
+    <div id="goldPrice" class="value">Loading...</div>
+  </div>
+
+  <div class="card">
+    <h2>Gold – Last 30 Days</h2>
+    <canvas id="goldChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Market Mood</h2>
+    <div id="marketMood" class="value">Loading...</div>
+  </div>
+
+  <div class="card">
+    <h2>Top Indian Stocks</h2>
+    <ul id="stocks"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
